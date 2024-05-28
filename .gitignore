@@ -1,0 +1,8 @@
+# Ignore the .env file containing environment variables
+.env
+
+# Ignore virtual environment directory
+.venv/
+
+# Ignore the database
+instances/

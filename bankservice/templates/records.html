@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Records</title>
+  </head>
+  <body>
+    <h1>Records</h1>
+
+    <h2>Deposits</h2>
+    <ul>
+      {% for deposit in transactions.deposits %}
+      <li>Amount: {{ deposit.amount }}, Date: {{ deposit.date }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Withdrawls</h2>
+    <ul>
+      {% for withdraw in transactions.withdrawls %}
+      <li>Amount: {{ withdraw.amount }}, Date: {{ withdraw.date }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Transfers</h2>
+    <ul>
+      {% for transfer in transactions.transfers_recieved %}
+      <li>
+        Amount: {{ transfer.amount }}, Date: {{ transfer.date }}, To Account ID:
+        {{ transfer.from_account_id }}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('user_profile') }}">Back to Profile</a>
+  </body>
+</html>

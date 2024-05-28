@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer Funds</title>
+  </head>
+  <body>
+    <h1>Transfer Funds</h1>
+    <form method="POST">
+      <label for="transfer_amount">Amount:</label>
+      <input
+        type="number"
+        name="transfer_amount"
+        id="transfer_amount"
+        min="0"
+        step="0.01"
+        required
+      />
+      <br />
+      <br />
+      <label for="from_account_type">From:</label>
+      <select name="from_account_type" id="from_account_type">
+        <option value="checking">Checking</option>
+        <option value="savings">Savings</option>
+      </select>
+      <br />
+      <br />
+      <label for="to_account_type">To:</label>
+      <select name="to_account_type" id="to_account_type">
+        <option value="checking">Checking</option>
+        <option value="savings">Savings</option>
+      </select>
+      <br />
+      <br />
+      <input type="submit" value="Transfer" />
+    </form>
+  </body>
+</html>

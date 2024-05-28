@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ user.username }}'s Profile</title>
+  </head>
+  <body>
+    <h1>Welcome to Luna Bank {{ user.username }}</h1>
+    <p>Balance: {{ user.accounts[0].balance }}</p>
+
+    {% if not savings_account %}
+      <a href="{{ url_for('create_savings') }}">Create Savings Account</a> <br> <br>
+    {% else %}
+      <p>Savings: {{ user.accounts[1].balance }}</p>
+    {% endif %}
+
+    <a href="{{ url_for('deposit') }}">Make a Deposit</a> <br> <br>
+    <a href="{{ url_for('withdraw') }}">Make a Withdrawl</a> <br> <br>
+    <a href="{{ url_for('transfer') }}">Make a Transfer</a> <br> <br>
+    <a href="{{ url_for('records') }}">Get Records</a> <br> <br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+    </form>
+  </body>
+</html>

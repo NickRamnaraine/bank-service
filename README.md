@@ -3,7 +3,7 @@ Banking service using Flask and SQLAlchemy.
 
 This project simulates a standard banking system where users can create accounts, deposit, withdraw, and transfer money, among other functionalities.
 
-# Instalation
+# Installation
 
 To set up this project locally, follow these steps:
 
